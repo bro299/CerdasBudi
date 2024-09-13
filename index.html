@@ -81,6 +81,66 @@
             transition: max-height 0.3s ease;
         }
     </style>
+    <style>
+        /* Hero Section */
+        #home {
+            background: linear-gradient(135deg, #6D28D9 0%, #4C1D95 50%, #8B5CF6 100%);
+        }
+
+        /* Background Section */
+        #background {
+            background: radial-gradient(circle at top right, #8B5CF6 0%, #6D28D9 50%, #4C1D95 100%);
+        }
+
+        /* Features Section */
+        #features {
+            background: linear-gradient(45deg, #374151 0%, #1F2937 100%);
+        }
+
+        /* How to Use Section */
+        #how-to-use {
+            background: linear-gradient(to right, #1F2937, #374151, #1F2937);
+        }
+
+        /* Chat Section */
+        #chat-section {
+            background: radial-gradient(ellipse at bottom, #4C1D95 0%, #1F2937 100%);
+        }
+
+        /* FAQ Section */
+        #faq {
+            background: linear-gradient(180deg, #1F2937 0%, #374151 100%);
+        }
+
+        /* Error Help Section */
+        #error-help {
+            background: linear-gradient(135deg, #374151 0%, #4C1D95 100%);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #1F2937, #2D3748);
+        }
+
+        /* Add a subtle animation to gradients */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Apply animation to all sections */
+        section {
+            background-size: 200% 200%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+    </style>
 </head>
 <body class="bg-background text-text font-sans dark">
     <!-- Loading Screen -->
@@ -145,53 +205,53 @@
     </section>
 
     <!-- Background Section -->
-<section id="background" class="py-16 bg-gradient-to-br from-primary via-secondary to-accent">
-    <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6 text-white">Latar Belakang CerdasBudi</h2>
-            <p class="text-lg mb-8 text-gray-200">
-                CerdasBudi lahir dari keprihatinan kami terhadap maraknya kasus perundungan dan dampaknya yang mendalam pada masyarakat kita, khususnya generasi muda. Kami melihat bagaimana korban perundungan sering kali mengalami:
-            </p>
-            <ul class="text-left text-gray-200 mb-8 space-y-4">
-                <li><i class="fas fa-check-circle text-accent mr-2"></i>Rasa malu yang mendalam dan berkepanjangan</li>
-                <li><i class="fas fa-check-circle text-accent mr-2"></i>Ketakutan untuk bersosialisasi atau mengekspresikan diri</li>
-                <li><i class="fas fa-check-circle text-accent mr-2"></i>Kesulitan dalam membangun kepercayaan diri</li>
-                <li><i class="fas fa-check-circle text-accent mr-2"></i>Masalah dalam lingkungan sekolah dan kerja</li>
-                <li><i class="fas fa-check-circle text-accent mr-2"></i>Kecenderungan untuk menjadi antisosial</li>
-            </ul>
-            <p class="text-lg mb-8 text-gray-200">
-                Kami percaya bahwa setiap individu berhak untuk merasa aman, dihargai, dan percaya diri. CerdasBudi hadir sebagai solusi inovatif untuk memberikan dukungan psikologis yang mudah diakses, tanpa judgement, dan tersedia 24/7.
-            </p>
-        </div>
-    </div>
-
-    <!-- Vector Illustrations Section -->
-    <div class="mt-16 max-w-5xl mx-auto">
-        <h3 class="text-2xl font-bold mb-8 text-center text-white">Situasi dan Solusi</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Illustration 1: Bullying Situation -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="assets/bully.jpg" alt="Ilustrasi situasi perundungan" class="w-full h-40 object-cover mb-4 rounded">
-                <h4 class="text-lg font-semibold mb-2 text-gray-800">Situasi Perundungan</h4>
-                <p class="text-gray-600">Menggambarkan situasi perundungan yang sering terjadi di sekolah atau tempat kerja.</p>
-            </div>
-            
-            <!-- Illustration 2: Impact of Bullying -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="assets/dampak.jpg" alt="Ilustrasi dampak perundungan" class="w-full h-40 object-cover mb-4 rounded">
-                <h4 class="text-lg font-semibold mb-2 text-gray-800">Dampak Perundungan</h4>
-                <p class="text-gray-600">Menunjukkan dampak emosional dan psikologis dari perundungan pada korban.</p>
-            </div>
-            
-            <!-- Illustration 3: CerdasBudi Solution -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="assets/berhasil.jpg" alt="Ilustrasi solusi CerdasBudi" class="w-full h-40 object-cover mb-4 rounded">
-                <h4 class="text-lg font-semibold mb-2 text-gray-800">Solusi CerdasBudi</h4>
-                <p class="text-gray-600">Menggambarkan bagaimana CerdasBudi membantu mengatasi dampak perundungan dan meningkatkan kepercayaan diri.</p>
+    <section id="background" class="py-16 bg-gradient-to-br from-primary via-secondary to-accent">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6 text-white">Latar Belakang CerdasBudi</h2>
+                <p class="text-lg mb-8 text-gray-200">
+                    CerdasBudi lahir dari keprihatinan kami terhadap maraknya kasus perundungan dan dampaknya yang mendalam pada masyarakat kita, khususnya generasi muda. Kami melihat bagaimana korban perundungan sering kali mengalami:
+                </p>
+                <ul class="text-left text-gray-200 mb-8 space-y-4">
+                    <li><i class="fas fa-check-circle text-accent mr-2"></i>Rasa malu yang mendalam dan berkepanjangan</li>
+                    <li><i class="fas fa-check-circle text-accent mr-2"></i>Ketakutan untuk bersosialisasi atau mengekspresikan diri</li>
+                    <li><i class="fas fa-check-circle text-accent mr-2"></i>Kesulitan dalam membangun kepercayaan diri</li>
+                    <li><i class="fas fa-check-circle text-accent mr-2"></i>Masalah dalam lingkungan sekolah dan kerja</li>
+                    <li><i class="fas fa-check-circle text-accent mr-2"></i>Kecenderungan untuk menjadi antisosial</li>
+                </ul>
+                <p class="text-lg mb-8 text-gray-200">
+                    Kami percaya bahwa setiap individu berhak untuk merasa aman, dihargai, dan percaya diri. CerdasBudi hadir sebagai solusi inovatif untuk memberikan dukungan psikologis yang mudah diakses, tanpa judgement, dan tersedia 24/7.
+                </p>
             </div>
         </div>
-    </div>
-</section>
+    
+        <!-- Vector Illustrations Section -->
+        <div class="mt-16 max-w-5xl mx-auto">
+            <h3 class="text-2xl font-bold mb-8 text-center text-white">Situasi dan Solusi</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Illustration 1: Bullying Situation -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="assets/bully.jpg" alt="Ilustrasi situasi perundungan" class="w-full h-40 object-cover mb-4 rounded">
+                    <h4 class="text-lg font-semibold mb-2 text-gray-800">Situasi Perundungan</h4>
+                    <p class="text-gray-600">Menggambarkan situasi perundungan yang sering terjadi di sekolah atau tempat kerja.</p>
+                </div>
+                
+                <!-- Illustration 2: Impact of Bullying -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="assets/dampak.jpg" alt="Ilustrasi dampak perundungan" class="w-full h-40 object-cover mb-4 rounded">
+                    <h4 class="text-lg font-semibold mb-2 text-gray-800">Dampak Perundungan</h4>
+                    <p class="text-gray-600">Menunjukkan dampak emosional dan psikologis dari perundungan pada korban.</p>
+                </div>
+                
+                <!-- Illustration 3: CerdasBudi Solution -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="assets/berhasil.jpg" alt="Ilustrasi solusi CerdasBudi" class="w-full h-40 object-cover mb-4 rounded">
+                    <h4 class="text-lg font-semibold mb-2 text-gray-800">Solusi CerdasBudi</h4>
+                    <p class="text-gray-600">Menggambarkan bagaimana CerdasBudi membantu mengatasi dampak perundungan dan meningkatkan kepercayaan diri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section id="features" class="py-16 bg-card">
@@ -301,17 +361,6 @@
                     <i class="fas fa-paper-plane mr-2"></i>Mulai Mengobrol
                 </button>
             </form>
-
-            <!-- Chat Interface -->
-            <div id="chat-interface" class="max-w-3xl mx-auto bg-background p-6 rounded-lg shadow-lg hidden">
-                <div id="chat-messages" class="space-y-4 mb-6 h-96 overflow-y-auto"></div>
-                <form id="chat-form" class="flex items-center">
-                    <input type="text" id="user-input" name="user-input" placeholder="Ketik pesan Anda di sini..." class="flex-grow px-4 py-2 bg-card border border-gray-600 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary text-text">
-                    <button type="submit" class="bg-primary text-text px-6 py-2 rounded-r-md hover:bg-opacity-80 transition duration-300">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
         </div>
     </section>
 
@@ -371,13 +420,184 @@
             </div>
         </div>
     </section>
-
+    
     <footer class="bg-background py-8">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2024 CerdasBudi. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="https://bro299.github.io/cerdasjs/cerdas.js"></script>
+    <script>
+        let apiKey = '';
+        let userName = '';
+        let userAge = '';
+        let userGender = '';
+
+        // Loading animation
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            gsap.to(loadingScreen, {duration: 1, opacity: 0, display: 'none', ease: 'power2.inOut'});
+            
+            // Animate main elements
+            gsap.to('#main-title', {duration: 1, opacity: 1, y: 20, delay: 0.5});
+            gsap.to('#main-subtitle', {duration: 1, opacity: 1, y: 20, delay: 0.7});
+            gsap.to('#start-chat-btn', {duration: 1, opacity: 1, y: 20, delay: 0.9});
+            gsap.to('#hero-image', {duration: 1, opacity: 1, scale: 1.05, delay: 1.1});
+
+            // Animate feature cards
+            gsap.to('.feature-card', {duration: 1, opacity: 1, y: 20, stagger: 0.2, delay: 1.3});
+        });
+
+        // Navbar transparency
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ toggle function
+        function toggleFAQ(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            gsap.to(content, {
+                duration: 0.3,
+                height: content.style.height === 'auto' ? 0 : 'auto',
+                opacity: content.style.height === 'auto' ? 0 : 1,
+                onComplete: () => {
+                    content.classList.toggle('hidden');
+                }
+            });
+
+            gsap.to(icon, {
+                duration: 0.3,
+                rotation: icon.style.transform === 'rotate(180deg)' ? 0 : 180
+            });
+        }
+
+        // API Key handling
+        async function loadApiKey() {
+            try {
+                const response = await fetch('.env');
+                if (!response.ok) {
+                    throw new Error('Gagal memuat file .env');
+                }
+                const text = await response.text();
+                const match = text.match(/API_KEY=(.+)/);
+                if (match && match[1]) {
+                    apiKey = match[1].trim();
+                } else {
+                    throw new Error('API key tidak ditemukan di file .env');
+                }
+            } catch (error) {
+                console.error('Error memuat API key:', error);
+                await promptForApiKey();
+            }
+        }
+
+        async function promptForApiKey() {
+            const result = await Swal.fire({
+                icon: 'info',
+                title: 'API Key Diperlukan',
+                html: 'Silakan masukkan API key Anda:<br><br>' +
+                      '<a href="https://aistudio.google.com/app/apikey?" target="_blank" class="text-blue-500 hover:underline">Klik di sini untuk mendapatkan API key</a>',
+                input: 'text',
+                inputPlaceholder: 'API key Anda',
+                showCancelButton: true,
+                inputValidator: (value) => {
+                    if (!value) {
+                        return 'Anda perlu memasukkan API key!';
+                    }
+                }
+            });
+
+            if (result.isConfirmed) {
+                apiKey = result.value;
+                await saveApiKey(apiKey);
+            }
+        }
+
+        async function saveApiKey(key) {
+            try {
+                const response = await fetch('/save-api-key', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ apiKey: key }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Gagal menyimpan API key');
+                }
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'API Key Tersimpan',
+                    text: 'API key Anda telah berhasil disimpan.',
+                });
+            } catch (error) {
+                console.error('API Key Tersimpan:', error);
+                Swal.fire({
+                    icon: 'succes',
+                    title: 'API Key Tersimpan',
+                    text: 'API key Anda telah berhasil disimpan.',
+                });
+            }
+        }
+
+        loadApiKey();
+
+        // Handle user profile form submission
+        const userProfileForm = document.getElementById('user-profile-form');
+        userProfileForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            userName = document.getElementById('user-name').value;
+            userAge = document.getElementById('user-age').value;
+            userGender = document.querySelector('input[name="user-gender"]:checked').value;
+            
+            // Redirect to chat interface page
+            window.location.href = `chat.html?name=${encodeURIComponent(userName)}&age=${encodeURIComponent(userAge)}&gender=${encodeURIComponent(userGender)}`;
+        });
+    </script>
 </body>
 </html>
