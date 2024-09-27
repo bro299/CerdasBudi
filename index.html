@@ -428,7 +428,6 @@
     </footer>
 
     <script>
-        let apiKey = '';
         let userName = '';
         let userAge = '';
         let userGender = '';
@@ -513,79 +512,6 @@
                 rotation: icon.style.transform === 'rotate(180deg)' ? 0 : 180
             });
         }
-
-        // API Key handling
-        async function loadApiKey() {
-            try {
-                const response = await fetch('.env');
-                if (!response.ok) {
-                    throw new Error('Gagal memuat file .env');
-                }
-                const text = await response.text();
-                const match = text.match(/API_KEY=(.+)/);
-                if (match && match[1]) {
-                    apiKey = match[1].trim();
-                } else {
-                    throw new Error('API key tidak ditemukan di file .env');
-                }
-            } catch (error) {
-                console.error('Error memuat API key:', error);
-                await promptForApiKey();
-            }
-        }
-
-        async function promptForApiKey() {
-            const result = await Swal.fire({
-                icon: 'info',
-                title: 'API Key Diperlukan',
-                html: 'Silakan masukkan API key Anda:<br><br>' +
-                      '<a href="https://aistudio.google.com/app/apikey?" target="_blank" class="text-blue-500 hover:underline">Klik di sini untuk mendapatkan API key</a>',
-                input: 'text',
-                inputPlaceholder: 'API key Anda',
-                showCancelButton: true,
-                inputValidator: (value) => {
-                    if (!value) {
-                        return 'Anda perlu memasukkan API key!';
-                    }
-                }
-            });
-
-            if (result.isConfirmed) {
-                apiKey = result.value;
-                await saveApiKey(apiKey);
-            }
-        }
-
-        async function saveApiKey(key) {
-            try {
-                const response = await fetch('/save-api-key', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ apiKey: key }),
-                });
-
-                if (!response.ok) {
-                    throw new Error('Gagal menyimpan API key');
-                }
-
-                Swal.fire({
-                    icon: 'success',
-                    title: 'API Key Tersimpan',
-                    text: 'API key Anda telah berhasil disimpan.',
-                });
-            } catch (error) {
-                console.error('API Key Tersimpan:', error);
-                Swal.fire({
-                    icon: 'succes',
-                    title: 'API Key Tersimpan',
-                    text: 'API key Anda telah berhasil disimpan.',
-                });
-            }
-        }
-
-        loadApiKey();
 
         // Handle user profile form submission
         const userProfileForm = document.getElementById('user-profile-form');
