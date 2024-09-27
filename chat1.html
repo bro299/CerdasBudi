@@ -170,20 +170,27 @@
         }
 
         async function promptForApiKey() {
-            const result = await Swal.fire({
-                icon: 'info',
-                title: 'API Key Diperlukan',
-                html: 'Silakan masukkan API key Anda:<br><br>' +
-                      '<a href="https://makersuite.google.com/app/apikey" target="_blank" class="text-blue-500 hover:underline">Klik di sini untuk mendapatkan API key</a>',
-                input: 'text',
-                inputPlaceholder: 'API key Anda',
-                showCancelButton: true,
-                inputValidator: (value) => {
-                    if (!value) {
-                        return 'Anda perlu memasukkan API key!';
-                    }
-                }
-            });
+    const result = await Swal.fire({
+        icon: 'info',
+        title: 'API Key Diperlukan',
+        html: `
+            <p>Silakan masukkan API key Anda:</p>
+            <ol class="text-left mt-4 mb-4">
+                <li>1. Kunjungi <a href="https://makersuite.google.com/app/apikey" target="_blank" class="text-blue-500 hover:underline">Google AI Studio</a></li>
+                <li>2. Klik "Create API key" atau "Buat API key"</li>
+                <li>3. Salin API key yang dihasilkan</li>
+                <li>4. Tempel API key tersebut di bawah ini</li>
+            </ol>
+        `,
+        input: 'text',
+        inputPlaceholder: 'Tempel API key Anda di sini',
+        showCancelButton: true,
+        inputValidator: (value) => {
+            if (!value) {
+                return 'Anda perlu memasukkan API key!';
+            }
+        }
+    });
 
             if (result.isConfirmed) {
                 apiKey = result.value;
